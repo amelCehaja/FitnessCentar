@@ -1,0 +1,45 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxUrediDanVjezbaVM
+
+<form id="frm">
+    <input asp-for="ID" readonly hidden />
+    <input asp-for="DanID" readonly hidden />
+    <div class="form-group">
+        <label>Vjezba</label>
+        <input asp-for="Vjezba" class="form-control" readonly />
+        <span asp-validation-for="Vjezba" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Redni broj</label>
+        <select asp-for="RedniBroj" asp-items="Model.RedniBrojevi" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label>Broj setova</label>
+        <input asp-for="BrojSetova" class="form-control" />
+        <span asp-validation-for="BrojSetova" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Broj ponavljanja</label>
+        <input asp-for="BrojPonavljanja" class="form-control"/>
+        <span asp-validation-for="BrojPonavljanja" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Duzina odmora</label>
+        <input asp-for="DuzinaOdmora" class="form-control" />
+        <span asp-validation-for="DuzinaOdmora" class="text-danger"></span>
+    </div>
+    <button class="btn btn-success">Spremi</button>
+</form>
+<script>
+    $(document).ready(function () {
+        $("#frm").submit(function (e) {
+            e.preventDefault()
+            $.ajax({
+                url: "/ajax/spremiuredidanvjezba",
+                data: $("#frm").serialize(),
+                success: function (result) {
+                    $("#ajaxDiv").html(result)
+                }
+            })
+        })
+    })
+</script>

@@ -1,0 +1,26 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajKategorijuVM
+
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DodajKategoriju</title>
+</head>
+<body>
+    <h3>Dodaj kategoriju</h3>
+    <form action="/administracijawebshop/spremikategoriju">
+        <div class="form-group" style="width:450px;">
+            <label>Naziv</label>
+            <input asp-for="Naziv" class="form-control" />
+            <span asp-validation-for="Naziv" class="text-danger"></span>
+        </div>
+        <button class="btn btn-success" type="submit">Spremi</button>
+    </form>
+</body>
+</html>

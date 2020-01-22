@@ -1,0 +1,131 @@
+﻿@model FitnessCentar.web.ViewModels.Klijent.KalkulatorRezultatVM
+@{
+    ViewData["Title"] = "Kalorije potrebne za " + Model.Starost + " godine staru, " + Model.Tezina + " kg tešku osobu.";
+    var mmp5 = Model.Visina - 100;
+    var mmp10 = Model.Visina - 96;
+    var mmp15 = Model.Visina - 92;
+    string[] tabpaneid = new string[] { "maintance", "cutting", "bulking" };
+    double macronutrientsValue, vrijednost = Model.Tdee, procent = 0;
+    string macronutrientsText = "";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="row"><h2>Vaša statistika</h2></div>
+            <div class="row">
+                <div class="col">
+                    <span>
+                        Vi ste
+                        <input type="text" class="text-center form-control" style="width:50px;display:inline" value="@Model.Starost" readonly />
+                        godine stara osoba koja je visoka
+                        <input type="text" class="text-center form-control" style="width:50px;display:inline" value="@Model.Visina" readonly />
+                        cm i teži
+                        <input type="text" class="text-center form-control" style="width:50px;display:inline" value="@Model.Tezina" readonly />
+                        kg.
+                    </span>
+                    @if (Model.UdioMasnoce != null)
+                    {<span>Udio Masnoće : <input type="text" class="text-center form-control" style="width:50px;display:inline" value="@Model.UdioMasnoce" readonly /></span>}
+                </div>
+            </div>
+            <hr />
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <p class="text-center"><b>Vaše maintance kalorije</b></p>
+                    <div class="text-center tdee-cals">
+                        <div style="padding-top:25px;">
+                            <span class="h2">@(String.Format("{0:0,0}", Model.Tdee))</span><br />
+                            <span class="cals">kalorije po danu</span>
+                        </div>
+                        <hr style="border-color:red;" />
+                        <div style="padding-bottom:25px;">
+                            <span class="h2">@(String.Format("{0:0,0}", Model.Tdee * 7))</span><br />
+                            <span class="cals">kalorije po sedmici</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h4>BMI rezultat: @Model.Bmi</h4>
+                    <p>Vaš BMI je <b>@Model.Bmi</b>,spadate u kategoriju <b>@Model.BmiKategorija</b>.</p>
+                    @foreach (var kategorija in Model.BmiKategorijaList)
+                    {
+                        if (Model.BmiKategorija == kategorija.Text)
+                        {
+                            <div class="row" style="border-bottom:solid;border-width:1px;">
+                                <div class="col-xs-6"><b>@kategorija.Value</b></div>
+                                <div class="col-xs-6"><b>@kategorija.Text</b></div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="row" style="border-bottom:solid;border-width:1px;">
+                                <div class="col-xs-6">@kategorija.Value</div>
+                                <div class="col-xs-6">@kategorija.Text</div>
+                            </div>
+                        }
+                    }
+                </div>
+
+            </div>
+            <hr />
+
+            <div class="row"><h3>Maksimalni mišićni potencijal</h3></div>
+            <div class="row">
+                Vaš maksimalni mišićni potencijal za 5% udjela masnoće je <b>@mmp5 kg</b>, za  10% je <b>@mmp10 kg</b>,za 15% je <b>@mmp15 kg</b>.
+            </div>
+            <hr />
+            <div class="row"><h3>Makronutrijenti</h3></div>
+            @* row*@
+            @* col*@
+            <div class="row">
+                <ul class="nav nav-tabs" id="macro-tabs" role="tablist">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#maintance" id="maintance-tab" active" role="tab" data-toggle="tab">Maintance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cutting" id="cutting-tab" role="tab" data-toggle="tab">Cutting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bulking" id="bulking-tab" role="tab" data-toggle="tab">Bulking</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content" id="macro-content">
+                @for (int i = 0; i < tabpaneid.Length; i++)
+                {
+                    if (tabpaneid[i] == "cutting") { vrijednost = Model.Tdee - 500; }
+                    if (tabpaneid[i] == "bulking") { vrijednost = Model.Tdee + 500; }
+                    <div class="tab-pane @(i == 0 ? "active" : "")" id="@tabpaneid[i]" role="tabpanel">
+                        <div class="row">
+                            <div>Ove makronutrijentske vrijednosti reflektuju Vaše <b>@tabpaneid[i]</b> kalorije od <b>@(String.Format("{0:0,0}", vrijednost))</b> kalorija po danu.</div><br />
+                            @for (int j = 0; j < 3; j++)
+                            {
+                                <div class="col-sm-3 text-center tdee-cals" style="padding:0px;margin-right:8%;">
+                                    @for (int z = 0; z < 3; z++)
+                                    {
+                                        if (z == 0) { macronutrientsText = "proteini"; if (j == 1) { procent = 0.4; } else { procent = 0.3; } }
+                                        if (z == 1) { macronutrientsText = "masti"; procent = 0.35; if (j == 1) { procent = 0.4; } if (j == 2) { procent = 0.2; } }
+                                        if (z == 2) { macronutrientsText = "ugljikohidrati"; procent = 0.35; if (j == 1) { procent = 0.2; } if (j == 2) { procent = 0.5; } }
+                                        macronutrientsValue = vrijednost * procent;
+                                        if (z == 1) { macronutrientsValue = Math.Round(macronutrientsValue / 9); } else { macronutrientsValue = Math.Round(macronutrientsValue / 4); }
+                                        <div class="row" style="@(z == 0 ? "padding-top:25px;" : "")@(z == 2 ? "padding-bottom:25px;" : "")">
+                                            <span>@macronutrientsValue</span><br />
+                                            <span>@macronutrientsText</span><br />
+                                        </div>
+                                        if (z != 2)
+                                        { <hr style="border-color:red;" />}
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            @* col*@
+            @* row*@
+
+        </div>
+    </div>
+</div>

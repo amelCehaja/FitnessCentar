@@ -1,0 +1,35 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajPlanIProgramVM
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<h2>Dodaj Plan I Program</h2>
+<form action="/administracijaplaniprogram/spremiPlanIprogram">
+    <div class="form-group inputfields">
+        <label>Naziv</label>
+        <input asp-for="Naziv" class="form-control" />
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <div class="form-group inputfields">
+        <label>Opis</label>
+        <textarea asp-for="Opis" class="form-control" style="height:200px;" ></textarea>
+        <span asp-validation-for="Opis" class="text-danger"></span>
+    </div>
+    <div class="form-group inputfields">
+        <label>Broj sedmica</label>
+        <input asp-for="BrojSedmica" class="form-control" min="0"/>
+        <span asp-validation-for="BrojSedmica" class="text-danger"></span>
+    </div>
+    <div class="form-group inputfields">
+        <label>Kategorija:</label>
+        <select asp-for="KategorijaId" asp-items="Model.Kategorije" class="form-control"></select>
+        <span asp-validation-for="KategorijaId" class="text-danger"></span>
+    </div>
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
+<style>
+    .inputfields{
+        width: 450px;
+    }
+</style>

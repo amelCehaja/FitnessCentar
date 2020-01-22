@@ -1,0 +1,64 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPrikazStavke
+@{
+    ViewData["Title"] = "PrikazStavke";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+@if (ViewBag.NovaStavka != null)
+{
+    <div id="alert" class="alert alert-success" role="alert">
+        <span>Dodana stavka: "@ViewBag.NovaStavka"!</span>
+    </div>
+}
+else if (ViewBag.ObrisanaStavka != null)
+{
+    <div id="alert" class="alert alert-danger" role="alert">
+        <span>Obrisana stavka: "@ViewBag.ObrisanaStavka"!</span>
+    </div>
+}
+<h2>Prikaz Stavki</h2>
+<div class="form-group">
+    <input type="text" name="naziv" id="naziv" /><a id="search" href="###"><i class="fas fa-search"></i></a>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Slika</th>
+            <th>Naziv</th>
+            <th>Skladiste</th>
+            <th>Cijena</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Stavke)
+        {
+            <tr>
+                <td style="width:150px;"><img style="height:150px; width:150px;" src="~/images/Stavke/@x.Slika" /></td>
+                <td style="vertical-align:middle;">
+                    <div>
+                        <p style="font-weight:bold">@x.Naziv</p>
+                        <p style="font-weight:bold">@x.Kategorija (@x.Podkategorija)</p>
+                    </div>
+                </td>
+                <td style="vertical-align:middle;">
+                    @foreach (var s in x.Skladiste)
+                    {
+                        <span>@s, </span>
+                    }
+                </td>
+                <td style="vertical-align:middle;">@x.Cijena KM</td>
+                <td style="vertical-align:middle;"><a class="btn btn-info" href="/administracijawebshop/urediStavku?id=@x.ID"><i class="fas fa-edit"></i>Uredi</a><a class="btn btn-danger" href="/administracijawebshop/obrisistavku?id=@x.ID"><i class="fas fa-trash-alt"></i>Obriši</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/js/AdministracijaSkripte/RemoveAlert.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search").click(function (e) {
+            e.preventDefault()
+            window.location.href = "/administracijaWebShop/PrikazStavke?naziv=" + $("#naziv").val()
+        })
+    })
+</script>

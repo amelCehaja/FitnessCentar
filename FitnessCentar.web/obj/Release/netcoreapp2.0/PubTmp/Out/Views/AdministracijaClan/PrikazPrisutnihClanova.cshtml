@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "PrikazPrisutnihClanova";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+<h3>Prisutni clanovi</h3>
+<form>
+    <input type="text" id="cardNumber" name="cardNumber" class="form-control" style="margin-top:20px; width:200px; display:block; " placeholder="Broj kartice" />
+</form>
+
+<div id="ajaxDiv" style="background-color:rgba(207, 212, 203); padding-bottom:20px; margin-top:10px;"></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/ajax/PrikazPrisutnihClanova",
+            success: function (result) {
+                $("#ajaxDiv").html(result)
+            }
+        })
+        $("form").submit(function (e) {
+            e.preventDefault()
+            $.ajax({
+                url: "/ajax/PrisutstvoClana",
+                data: $("form").serialize(),
+                success: function (result) {
+                    $("#ajaxDiv").html(result)
+                }
+            })
+        })
+    })
+</script>
+
+

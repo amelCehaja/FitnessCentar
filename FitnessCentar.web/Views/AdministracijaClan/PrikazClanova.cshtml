@@ -1,0 +1,62 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaPrikazClanovaVM
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Prikaz članova</title>
+
+</head>
+<body>
+    <script src="~/js/AdministracijaSkripte/PrikazClanovaAjax.js"></script>
+    <div class="topinfo">
+        <p style="font-weight:bold; color: rgba(62, 64, 61); margin:10px;">Ukupno članova: @Model.UkupniBrojClanova</p>
+    </div>
+    <div class="topinfo">
+        <p style="font-weight:bold; color: rgba(62, 64, 61); margin:10px;">Članovi sa aktivnom članarinom: @Model.BrojAktivnihClanova</p>
+    </div>
+    <div id="filters">
+        <div style="display:inline-block;">
+            <div class="input-group mb-3 filteritems">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Ime i prezime:</span>
+                </div>
+                <input style="width:225px;" type="text" id="imePrezime" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="input-group mb-3 filteritems">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Clanarina:</label>
+                </div>
+                <select class="custom-select" asp-for="ClanarinaAN" asp-items="Model.ClanarineAN" id="clanarinaAN"></select>
+            </div>
+        </div>
+    </div>
+    <div id="tabela" style="background-color:rgba(207, 212, 203); padding-bottom:20px;">
+
+    </div>
+
+</body>
+</html>
+<style>
+    .topinfo {
+
+        display: inline-block;
+        width: 300px;
+      
+    }
+
+    #filters {
+        display: block;
+    }
+
+    .filteritems {
+        width: 350px;
+    }
+</style>

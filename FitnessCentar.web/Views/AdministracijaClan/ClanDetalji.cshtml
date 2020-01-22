@@ -1,0 +1,88 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDetaljiClanaVM
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ClanDetalji</title>
+</head>
+<body>
+    <div class="card" style="margin-top:20px; outline-style:unset; outline-color:dimgray">
+        <div class="card-body">
+            <div style="display:inline-block; margin-top:20px; margin-left:20px;">
+                <img style="width:250px; height:220px;" src="~/images/Clanovi/@Model.clan.Slika" />
+            </div>
+            <div style="display:inline-block; margin-top:20px; margin-left:50px; vertical-align:middle">
+                <div>
+                    <p class="details labels">Ime i Prezime:</p>
+                    <p class="details">@Model.clan.Ime @Model.clan.Prezime</p>
+                    <br />
+                    <p class="details labels">Datum rođenja:</p>
+                    <p class="details">@Model.clan.DatumRodenja.ToString()</p>
+                    <br />
+                    <p class="details labels">Broj telefona:</p>
+                    <p class="details">@Model.clan.BrojTelefona</p>
+                    <br />
+                    <p class="details labels">JMBG:</p>
+                    <p class="details">@Model.clan.JMBG</p>
+                    <br />
+                    <p class="details labels">Broj kartice:</p>
+                    <p class="details">@Model.clan.BrojKartice</p>
+                    <br />
+                    <p class="details labels">Aktivna članarina:</p>
+                    @{
+                        if (Model.clanarina != null)
+                        {
+                            <p class="details">@Model.clanarina.DatumIsteka.ToString()</p>
+                        }
+                        else
+                        {
+                            <p class="details">Korisnik nema trenutno aktivnu članarinu!</p>
+                        }
+                    }
+                    <br />
+                    <p class="details labels">Datum dodavanja prve članarine:</p>
+                    <p class="details">@Model.DatumPrveClanarine</p>
+                </div>
+            </div>
+            <br />
+            <a style="margin-left:20px;" class="btn btn-info" href="/administracijaclan/dodajclanarinu?id=@Model.clan.ID">Dodaj članarinu</a>|<a class="btn btn-success" href="/administracijaclan/editclan?id=@Model.clan.ID">Uredi</a>
+        </div>
+    </div>
+    <table class="table" style="margin-top:20px; width:500px;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Datum dodavanja</th>
+                <th>Datum isteka</th>
+                <th>Tip clanarine</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var x in Model.Clanarine)
+            {
+                <tr>
+                    <td>@x.DatumDodavanja</td>
+                    <td>@x.DatumIsteka</td>
+                    <td>@x.TipClanarine</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+<style>
+    .labels{
+        font-weight:bold; 
+    }
+    .details{
+        display:inline-block;
+        text-align:left;
+        width:320px;
+        font-size:20px;       
+    }
+</style>

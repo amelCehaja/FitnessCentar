@@ -1,0 +1,17 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaDodajKategorijuPIPVM
+@{
+    ViewData["Title"] = "DodajKategoriju";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Dodaj kategoriju</h2>
+<form action="/administracijaPlanIProgram/SpremiKategoriju" method="post">
+    <input asp-for="ID" readonly hidden />
+    <div class="form-group">
+        <label>Naziv:</label>
+        <input asp-for="Naziv" class="form-control" style="width: 450px;" />
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <button class="btn btn-success" style="margin-top:20px;">Spremi</button>
+</form>
+

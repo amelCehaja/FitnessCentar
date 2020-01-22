@@ -1,0 +1,228 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Zoo Culture</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/Administracija/administracijaLayout.css">
+    <link rel="stylesheet" href="~/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="~/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/AjaxScript.js"></script>
+    <script src="~/js/jsFIT.js"></script>
+</head>
+
+<body>
+    <div class="nav-side-menu">
+        <div class="brand">
+        <img src="~/images/logo.png" style="height: 100px; width: 100px;">
+        </div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+
+                <li data-toggle="collapse" data-target="#members" class="collapsed">
+                    <a href="#"><i class="fa fa-user fa-lg"></i> Članovi</a>
+                </li>
+                <ul class="sub-menu collapse" id="members">
+                    <li>
+                        <a href="/administracijaclan/prikazclanova">
+                            <div class="customsubmenu">Prikaz članova</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Administracijaclan/DodajClana">
+                            <div class="customsubmenu">Novi član</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#memberships" class="collapsed">
+                    <a href="#"><i class="fa fa-calendar-alt fa-lg"></i> Članarine</a>
+                </li>
+                <ul class="sub-menu collapse" id="memberships">
+                    <li>
+                        <a href="/administracijaclan/prikazclanarina">
+                            <div class="customsubmenu">Prikaz članarina</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaclan/prikaztipovaclanarina">
+                            <div class="customsubmenu">Tipovi članarine</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaclan/dodajtipclanarine">
+                            <div class="customsubmenu">Novi tip članarine</div>
+                        </a>
+                    </li>
+                </ul>
+
+                    <li  data-toggle="collapse" data-target="#employees" class="collapsed adminTypeOnly">
+                        <a href="#"><i class="fa fa-user-tie fa-lg"></i> Zaposlenici</a>
+                    </li>
+                    <ul class="sub-menu collapse adminTypeOnly" id="employees">
+                        <li>
+                            <a href="/administracijaZaposlenik/PrikazZaposlenika">
+                                <div class="customsubmenu">Prikaz zaposlenika</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/administracijaZaposlenik/DodajZaposlenika">
+                                <div class="customsubmenu">Novi zaposlenik</div>
+                            </a>
+                        </li>
+                    </ul>    
+
+                <li data-toggle="collapse" data-target="#shopitems" class="collapsed">
+                    <a href="#"><i class="fa fa-shopping-cart fa-lg"></i> Stavke shopa</a>
+                </li>
+                <ul class="sub-menu collapse" id="shopitems">
+                    <li>
+                        <a href="/administracijawebshop/prikazStavke">
+                            <div class="customsubmenu">Prikaz stavki</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijawebshop/DodajStavku">
+                            <div class="customsubmenu">Nova stavka</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijawebshop/PrikazKategorija">
+                            <div class="customsubmenu">Kategorije</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijawebshop/DodajKategoriju">
+                            <div class="customsubmenu">Nova kategorija</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="/administracijaClan/PrikazPrisutnihClanova">
+                        <div>
+                            <i class="fa fa-users fa-lg"></i>
+                            Prisutsvo
+                        </div>
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#planiprogram" class="collapsed">
+                    <a href="#"><i class="fas fa-dumbbell"></i>Plan i program treniranja</a>
+                </li>
+                <ul class="sub-menu collapse" id="planiprogram">
+                    <li>
+                        <a href="/administracijaplaniprogram/PlanIProgramLista">
+                            <div class="customsubmenu">
+                                Planovi i programi
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaplaniprogram/DodajPlanIProgram">
+                            <div class="customsubmenu">
+                                Novi plan i program
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaplanIprogram/PrikazKategorija">
+                            <div class="customsubmenu">
+                                Kategorije
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaplanIprogram/DodajKategoriju">
+                            <div class="customsubmenu">
+                                Dodaj kategoriju
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaplaniprogram/PrikazVjezbi">
+                            <div class="customsubmenu">
+                                Vjezbe
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijaplaniprogram/DodajVjezbu">
+                            <div class="customsubmenu">
+                                Nova vjezba
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#orders" class="collapsed">
+                    <a href="#"><i class="fas fa-shopping-cart"></i>Narudzbe</a>
+                </li>
+                <ul class="sub-menu collapse" id="orders">
+                    <li>
+                        <a href="/administracijawebshop/PrikazNarudzbi">
+                            <div class="customsubmenu">
+                                Nove naruzdbe
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/administracijawebshop/PrikazRacuna">
+                            <div class="customsubmenu">
+                                Isporucene
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <li>
+                    <a href="/autentifikacija/logout">
+                        <div>
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </div>
+                    </a>
+                    <form id="frm-logout" action="" method="POST"
+                          style="display: none;">
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div>
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "/ajax/userTypeCheck",
+                success: function (result) {
+                    if (result == false) {
+                        $(".adminTypeOnly").each(function () {
+                            $(this).css("display","none")
+                        })
+                    }
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaDetaljiNarudzbaVM
+@{
+    ViewData["Title"] = "DetaljiNarudzba";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Detalji narudzbe</h2>
+<div class="form-group" style="width:400px;">
+    <label>Kupac:</label>
+    <input asp-for="Kupac" readonly class="form-control" />
+</div>
+<div class="form-group" style="width:400px;">
+    <label>Adresa:</label>
+    <input asp-for="Adresa" readonly class="form-control" />
+</div>
+@if (Model.Isporuceno == false)
+{
+    <a class="btn btn-success" href="/administracijaWebShop/Isporuceno?id=@Model.ID">Isporuceno</a>
+}
+
+<table class="table" style="margin-top:20px;">
+    <thead class="thead-dark">
+        <tr>
+            <th>Slika</th>
+            <th>Naziv</th>
+            <th>Kolicina</th>
+            <th>Ukupna cijena</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Stavke)
+        {
+            <tr>
+                <td><img src="~/images/Stavke/@x.Slika" style="width:150px; height:150px;" /></td>
+                <td style="vertical-align:central;">
+                    <p>@x.Naziv</p>
+                    <p>@x.Kategorija</p>
+                </td>
+                <td style="vertical-align:central;">@x.Kolicina</td>
+                <td style="vertical-align:central;">@x.UkupnaCijena</td>
+            </tr>
+        }
+    </tbody>
+</table>

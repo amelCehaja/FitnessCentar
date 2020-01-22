@@ -1,0 +1,46 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaPrikazTipovaClanarinaVM
+@{
+    ViewData["Title"] = "PrikazTipovaClanarina";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+@if (ViewBag.ObrisanTip != null)
+{
+    <div id="alert" class="alert alert-danger" role="alert">
+        <span>Obrisan tip clanarine: "@ViewBag.ObrisanTip"!</span>
+    </div>
+}
+else if (ViewBag.noviTipClanarine != null)
+{
+    <div id="alert" class="alert alert-success" role="alert">
+        <span>Dodan tip clanarine: "@ViewBag.noviTipClanarine"!</span>
+    </div>
+}
+<span></span>
+<table class="table" style="margin-top:20px;">
+    <thead class="thead-dark">
+        <tr>
+            <th>Naziv</th>
+            <th>Cijena</th>
+            <th>Trajanje</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AdministracijaPrikazTipovaClanarinaVM.TipClanarine x in Model.tipoviClanarine)
+        {
+            <tr>
+                <td>@x.Naziv</td>
+                <td>@x.Cijena</td>
+                <td>@x.VrijemeTrajanja</td>
+                <td><a class="btn btn-info" href="/Administracijaclan/EditTipClanarine?id=@x.ID"><i class="fas fa-edit"></i>Uredi</a><a class="btn btn-danger" href="/administracijaclan/obrisiTipClanarine?id=@x.ID"><i class="fas fa-trash-alt"></i>Obriši</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    th, td {
+        text-align: center;
+    }
+</style>
+<script src="~/js/AdministracijaSkripte/RemoveAlert.js"></script>

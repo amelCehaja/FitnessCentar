@@ -1,0 +1,117 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPrikazPlanIProgramVM
+@{
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+<div id="ajaxForm">
+    <form style="width:450px;">
+        <input asp-for="ID" readonly hidden id="planId" />
+        <div class="form-group">
+            <label for="naziv">Naziv:</label>
+            <input id="naziv" asp-for="Naziv" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label for="kategorija">Kategorija:</label>
+            <input id="kategorija" asp-for="Kategorija" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label for="opis">Opis:</label>
+            <textarea id="opis" readonly asp-for="Opis" class="form-control" style="height:200px;"></textarea>
+        </div>
+        <a class="btn btn-info" href="/ajax/urediPlanIProgram?id=@Model.ID" ajax-poziv="da" ajax-rezultat="ajaxForm"><i class="fas fa-edit"></i>Uredi</a>
+    </form>
+</div>
+<div id="sedmice" style="display:inline-block; float:left; width:150px; margin-top:20px;">
+    @foreach (var x in Model.Sedmice)
+    {
+        <div class="dropdown">
+            <button class="dropbtn">@x.RedniBroj. Sedmica</button>
+            <div class="dropdown-content">
+                @foreach (var y in x.Dani)
+                {
+                    <a href="/ajax/PrikazDana?id=@y.ID" ajax-poziv="da" ajax-rezultat="ajaxDiv">@y.RedniBroj. Dan</a>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+
+<div id="ajaxDiv" style="display:inline-block; margin-top:20px;"></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Ajax/PrikazSedmice?planID=" + $("#planId").val(),
+            success: function (result) {
+                $("#ajaxDiv").html(result)
+            }
+        })
+    })
+</script>
+
+<style>
+
+    /* Style The Dropdown Button */
+    .dropbtn {
+        background-color: rgba(93, 96, 99);
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        color: white;
+        display: none;
+        position: absolute;
+        left: 108px;
+        top: 0px;
+        background-color: rgba(62, 62, 66);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: rgba(47, 47, 48);
+            }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: rgba(47, 47, 48);
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").click(function () {
+            if ($(this).children(".dropdown-content").css("display") == "none") {
+                $(".dropdown").children(".dropdown-content").css("display", "none")
+                $(this).children(".dropdown-content").css("display", "block")
+            }
+            else {
+                $(this).children(".dropdown-content").css("display", "none")
+            }
+        })
+        $('body').click(function (event) {
+            if ($(event.target).is('.dropbtn') == false) {
+                $(".dropdown").children(".dropdown-content").css("display", "none")
+            }
+        })
+    })
+</script>

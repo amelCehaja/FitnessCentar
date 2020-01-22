@@ -1,0 +1,23 @@
+﻿
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+form {
+    margin-top: 15px;
+}
+
+    form > input {
+        margin-right: 15px;
+    }
+
+
+#buttonhide {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+}

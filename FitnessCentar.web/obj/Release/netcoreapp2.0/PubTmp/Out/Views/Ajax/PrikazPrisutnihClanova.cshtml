@@ -1,0 +1,31 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPrikazPrisutnihClanovaVM
+
+@foreach (var x in Model.Clanovi)
+{
+    <a href="/administracijaclan/clanDetalji?id=@x.ID">
+        <div class="clan" style="width:200px; height:300px; display:inline-block; background-color:rgba(143, 230, 67);  margin:20px 0px 0px 15px; border-radius:20px;">
+            <img src="~/images/Clanovi/@x.Slika" style="width:150px; height:150px; display:block; margin: 15px auto 15px auto" />
+            <p class="details">@x.Ime</p>
+            <p class="details">@x.VrijemeDolaska</p>
+            <input value="@x.AktivnaClanarina" class="aktivna" hidden />
+        </div>
+    </a>
+}
+<style>
+    .details {
+        font-weight: bold;
+        color: rgba(62, 64, 61);
+        text-align: center;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".clan").each(function () {
+            console.log($(this).children(".aktivna").val())
+            if ($(this).children(".aktivna").val() == "ne") {
+                $(this).css("background-color","red")
+            }
+        })
+    })
+</script>
+

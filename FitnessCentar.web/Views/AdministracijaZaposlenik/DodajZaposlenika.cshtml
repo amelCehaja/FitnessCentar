@@ -1,0 +1,59 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajZaposlenikaVM
+@{
+    ViewData["Title"] = "DodajZaposlenika";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Dodaj zaposlenika</h2>
+<form action="/Administracijazaposlenik/SpremiZaposlenika">
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label>Ime:</label>
+            <input asp-for="Ime" class="form-control" />
+            <span asp-validation-for="Ime" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-6">
+            <label>Prezime: </label>
+            <input asp-for="Prezime" class="form-control" />
+            <span asp-validation-for="Prezime" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label>JMBG: </label>
+            <input asp-for="JMBG" class="form-control" />
+            <span asp-validation-for="JMBG" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-6">
+            <label>Spol: </label>
+            <select asp-for="Spol" asp-items="Model.spol" class="form-control"></select>
+            <span asp-validation-for="Spol" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label>Broj telefona: </label>
+            <input asp-for="BrojTelefona" class="form-control" />
+            <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-6">
+            <label>Datum rođenja: </label>
+            <input asp-for="DatumRodenja" type="date" class="form-control" />
+            <span asp-validation-for="DatumRodenja" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label>Email: </label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Spremi</button>
+</form>
+

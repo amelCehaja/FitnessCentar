@@ -1,0 +1,37 @@
+﻿@using FitnessCentar.web.ViewModels.AjaxVMs
+@model AjaxPrikazClanarinaVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikazClanarina</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Ime i prezime</th>
+                <th>Tip clanarine</th>
+                <th>Datum dodavanja</th>
+                <th>Datum isteka</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (AjaxPrikazClanarinaVM.Clanarina x in Model.clanovi)
+            {
+                <tr>
+                    <td>@x.ImePrezime</td>
+                    <td>@x.TipClanarine</td>
+                    <td>@x.DatumDodavanja</td>
+                    <td>@x.DatumIsteka</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

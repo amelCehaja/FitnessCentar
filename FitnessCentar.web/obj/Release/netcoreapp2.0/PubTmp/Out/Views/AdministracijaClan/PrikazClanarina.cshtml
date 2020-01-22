@@ -1,0 +1,31 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaPrikazClanarinaVMs
+@{
+    ViewData["Title"] = "PrikazClanarina";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<p style="font-weight:bold; color: rgba(62, 64, 61); margin:10px;">Broj aktivnih članarina: @Model.UkupnoAktivnih</p>
+<div style="display:inline-block;">
+    <div class="input-group mb-3 filteritems">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Status:</label>
+        </div>
+        <select class="custom-select" id="status" asp-items="Model.statusi"></select>
+    </div>
+</div>
+
+<div style="display:inline-block;">
+    <div class="input-group mb-3 filteritems">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Tip:</label>
+        </div>
+        <select class="custom-select" id="tipClanarine" asp-items="Model.tipoviClanarine"></select>
+    </div>
+</div>
+
+<br />
+<div id="clanarine"></div>
+<script src="~/js/AdministracijaSkripte/PrikazClanarina.js"></script>
+
+

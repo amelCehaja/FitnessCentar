@@ -1,0 +1,41 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaPrikazVjezbiVM
+@{
+    Layout = "AdministracijaLayout";
+}
+@if (ViewBag.NovaVjezba != null)
+{
+    <div id="alert" class="alert alert-success" role="alert">
+        <span>Dodana vjezba: "@ViewBag.NovaVjezba"!</span>
+    </div>
+}
+else if (ViewBag.ObrisanaVjezba != null)
+{
+    <div id="alert" class="alert alert-danger" role="alert">
+        <span>Obrisana vjezba: "@ViewBag.ObrisanaVjezba"!</span>
+    </div>
+}
+<h2>Prikaz vježbi</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Slika</th>
+            <th>Naziv</th>
+            <th>Opis</th>
+            <th style="text-align:center;">Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vjezba in Model.Vjezbe)
+        {
+            <tr>
+                <td style="width:150px;"><img src="~/images/Vjezbe/@vjezba.Slika" style="height:150px; width:150px;" /></td>
+                <td style="width:150px; vertical-align:middle">@vjezba.Naziv</td>
+                <td>@vjezba.Opis</td>
+                <td style="width:190px; vertical-align:middle"><a class="btn btn-info" href="/administracijaplaniprogram/editVjezbu?id=@vjezba.ID"><i class="fas fa-edit"></i>Uredi</a><a class="btn btn-danger" href="/administracijaPlanIProgram/obrisivjezbu?id=@vjezba.ID"><i class="fas fa-trash-alt"></i>Obriši</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/js/AdministracijaSkripte/RemoveAlert.js"></script>
+

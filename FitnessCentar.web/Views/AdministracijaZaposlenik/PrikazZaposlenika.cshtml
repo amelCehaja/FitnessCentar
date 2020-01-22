@@ -1,0 +1,29 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijPrikazZaposlenikaVM
+@{
+    ViewData["Title"] = "PrikazZaposlenika";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Prikaz zaposlenika</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Datum Rodenja</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model.zaposlenici)
+        {
+            <tr>
+                <td>@x.ImePrezime</td>
+                <td>@x.DatumRodenja</td>
+                <td><a class="btn btn-danger" href="/AdministracijaZaposlenik/ObrisiZaposlenika?id=@x.ID"><i class="fas fa-trash-alt"></i>Obriši</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

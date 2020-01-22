@@ -1,0 +1,63 @@
+﻿@model FitnessCentar.web.ViewModels.Klijent.KalkulatorVM
+@{
+    ViewData["Title"] = "Kalkulator kalorija";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <h2>Kalkulator kalorija</h2>
+
+            <form asp-action="Izracunaj">
+                <div class="form-group form-check">
+                    <label>Spol:</label>
+                    <div>
+                        @foreach (var spol in Model.SpolList)
+                        {
+                            <input type="radio" asp-for="Spol" value="@spol.Value" name="@spol.Text" id="@spol.Text" />
+                            <label for="@spol.Text">@spol.Text</label>
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Starost:</label>
+                    <div>
+                        <input asp-for="Starost" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tezina:</label>
+                    <div>
+                        <input asp-for="Tezina" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Visina:</label>
+                    <div>
+                        <input asp-for="Visina" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Aktivnost:</label>
+                    <div>
+                        <select asp-for="Aktivnost" asp-items="Model.AktivnostList" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Udio masnoce(opcionalno):</label>
+                    <input asp-for="UdioMasnoce" placeholder="%" class="form-control" />
+                </div>
+
+                <input type="submit" class="form-control btn btn-primary" value="Izracunaj" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

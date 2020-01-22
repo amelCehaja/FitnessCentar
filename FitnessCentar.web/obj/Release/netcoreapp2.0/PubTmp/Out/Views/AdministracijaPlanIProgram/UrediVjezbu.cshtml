@@ -1,0 +1,67 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaEditVjezbuVM
+@{
+    ViewData["Title"] = "UrediVjezbu";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Uredi vjezbu</h2>
+<form action="/administracijaplaniprogram/spremiEditVjezbu" method="post" enctype="multipart/form-data" style="width:450px;">
+    <input asp-for="ID" hidden/>
+    <div class="form-group inputFields">
+        <label>Naziv:</label>
+        <input asp-for="Naziv" class="form-control" readonly/>
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <div class="form-group inputFields">
+        <label>Opis:</label>
+        <textarea style="height:200px;" asp-for="Opis" class="form-control"></textarea>
+        <span asp-validation-for="Opis" class="text-danger"></span>
+    </div>
+    <div>
+        <div class="btn btn-sm" id="customBtn">
+            <span><i class="fas fa-cloud-upload-alt mr-2" aria-hidden="true"></i>Odaberi sliku:</span>
+            <label for="slika" class="custom-file-upload"></label>
+            <input id="slika" asp-for="Slika" class="hide_file">
+            <span asp-validation-for="Slika" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
+<script>
+    $('#slika').change(function () {
+        var i = $(this).prev('label').clone();
+        var file = $('#slika')[0].files[0].name;
+        $(this).prev('label').text(file);
+    });
+</script>
+<style>
+    .hide_file {
+        position: absolute;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    #customBtn {
+        padding: 5px 10px;
+        background: rgba(22, 203, 240);
+        position: relative;
+        color: white;
+        border-radius: 2px;
+        text-align: center;
+        float: left;
+        cursor: pointer
+    }
+
+    .inputFields {
+        width: 450px;
+    }
+</style>
+

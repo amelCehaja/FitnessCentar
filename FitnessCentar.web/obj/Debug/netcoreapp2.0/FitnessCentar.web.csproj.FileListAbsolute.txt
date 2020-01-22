@@ -1,0 +1,97 @@
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojResolveAssemblyReference.cache
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CoreCompileInputs.cache
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\VS Projects\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\VS Projects\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojResolveAssemblyReference.cache
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CoreCompileInputs.cache
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+C:\Users\Cehaja\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojAssemblyReference.cache
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CoreCompileInputs.cache
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CopyComplete
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\RS1 seminarski\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojAssemblyReference.cache
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CopyComplete
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.dll
+D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.pdb
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.dll
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.pdb
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojAssemblyReference.cache
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CopyComplete
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+C:\Users\ado_b\Desktop\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\appsettings.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.deps.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.runtimeconfig.dev.json
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.web.pdb
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.dll
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.dll
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.service.pdb
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\bin\Debug\netcoreapp2.0\FitnessCentar.data.pdb
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csprojAssemblyReference.cache
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfoInputs.cache
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.AssemblyInfo.cs
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.csproj.CopyComplete
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.dll
+D:\Seminarski radovi\RS1\WebApp\FitnessCentar.web\obj\Debug\netcoreapp2.0\FitnessCentar.web.pdb

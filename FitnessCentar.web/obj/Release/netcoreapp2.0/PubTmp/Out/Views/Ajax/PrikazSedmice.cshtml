@@ -1,0 +1,13 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxPrikazSedmiceVM
+<input asp-for="SedmicaID" hidden readonly id="sedmicaID"/>
+<div id="ajaxDiv2" style="display:inline-block;"></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/ajax/prikazdana?sedmicaID=" + $("#sedmicaID").val(),
+            success: function (result) {
+                $("#ajaxDiv2").html(result)
+            }
+        })
+    })
+</script>

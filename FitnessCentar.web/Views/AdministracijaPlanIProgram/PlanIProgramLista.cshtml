@@ -1,0 +1,34 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPlanIProgramVM
+@{
+    ViewData["Title"] = "PlanIProgramLista";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+@if (ViewBag.ObrisanPlan)
+{
+    <div id="alert" class="alert alert-danger" role="alert">
+        <span>Obrisan plan i program: "@ViewBag.ObrisanPlan"!</span>
+    </div>
+}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th style="width:200px;">Naziv</th>
+            <th style="width:200px;">Kategorija</th>
+            <th>Opis</th>
+            <th style="width:200px;">Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model.Planovi)
+        {
+            <tr>
+                <td>@x.Naziv</td>
+                <td>@x.Kategorija</td>
+                <td>@x.Opis</td>
+                <td><a class="btn btn-info" href="/administracijaplaniprogram/prikazPlaniprogram?planID=@x.ID"><i class="fas fa-info-circle"></i>Detalji</a><a class="btn btn-danger" href="/administracijaPlanIprogram/obrisiplaniprogram?id=@x.ID"><i class="fas fa-trash-alt"></i>Obrisi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/js/AdministracijaSkripte/RemoveAlert.js"></script>
+

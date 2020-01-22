@@ -1,0 +1,22 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxPrikazSkladistaVM
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Velicina</th>
+            <th>Kolicina</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.skladiste)
+        {
+            <tr>
+                <td>@x.Velicina</td>
+                <td>@x.Kolicina</td>
+                <td><a ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/ajax/urediSkladiste?id=@x.ID" class="btn btn-info"><i class="fas fa-edit"></i>Uredi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-success" href="/ajax/DodajSkladiste?id=@Model.StavkaID">Dodaj u skladiste</a>

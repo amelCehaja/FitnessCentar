@@ -1,0 +1,23 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaKategorijaDetaljiVM
+@{
+    ViewData["Title"] = "KategorijaDetalji";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Kategorija detalji</h2>
+<input id="ID" asp-for="ID" hidden />
+<div class="form-group">
+    <label>Naziv:</label>
+    <input asp-for="Naziv" class="form-control" readonly/>
+</div>
+<div id="ajaxDiv" style="margin-top: 20px;"></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/ajax/prikazPodkategorija?id=" + $("#ID").val(),
+            success: function (result) {
+                $("#ajaxDiv").html(result)
+            }
+        })
+    })
+</script>

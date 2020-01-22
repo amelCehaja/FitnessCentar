@@ -1,0 +1,30 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaEditTipClanarineVM
+@{
+    ViewData["Title"] = "EditTipClanarine";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Uredi Tip Clanarine</h2>
+<form action="/Administracijaclan/SnimieditTipClanarine">
+    <input asp-for="ID" hidden />
+
+    <div class="form-group" style="width:300px;">
+        <label>Naziv: </label>
+        <input asp-for="Naziv" readonly class="form-control" />
+    </div>
+
+    <div class="form-group" style="width:300px;">
+        <label>Cijena: </label>
+        <input asp-for="Cijena" class="form-control" />
+        <span asp-validation-for="Cijena" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="width:300px;">
+        <label>Vrijeme trajanja:</label>
+        <input asp-for="Trajanje" class="form-control" />
+        <span asp-validation-for="Trajanje" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Spremi</button>
+</form>
+

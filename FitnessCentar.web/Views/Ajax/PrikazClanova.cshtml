@@ -1,0 +1,38 @@
+﻿@using FitnessCentar.web.ViewModels.AjaxVMs
+@model AjaxPrikazClanova
+
+
+@if (Model != null)
+{
+    @foreach (AjaxPrikazClanova.Clan clan in Model.clanovi)
+    {
+        <a href="/administracijaclan/clanDetalji?id=@clan.id">
+            <div class="clan" style=" display: inline-block; position:relative; width: 200px;  height: 300px; border-radius: 20px; margin: 20px 0px 0px 15px;  background-color: rgba(143, 230, 67);">
+                <img src="~/images/Clanovi/@clan.Slika" style="width:150px; height:130px; display:block; margin: 15px auto 15px auto" />
+                <p class="details">@clan.ImePrezime</p>
+                <p class="details">@clan.TipClanarine</p>
+                <p class="datumIsteka details">@clan.datumIstekaClanarine</p>
+            </div>
+        </a>
+    }
+}
+
+<style>
+    .details {
+        font-weight: bold;
+        color: rgba(62, 64, 61);
+        text-align: center;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $(".clan").each(function () {
+            if ($(this).children(".datumIsteka").html() == "---") {
+                $(this).css("background-color","red")
+            }
+        })
+    })
+</script>
+
+

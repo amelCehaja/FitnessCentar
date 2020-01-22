@@ -1,0 +1,89 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajStavkuVM
+@{
+    Layout = "AdministracijaLayout";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DodajStavku</title>
+    <script src="~/js/AdministracijaSkripte/DodajStavku.js"></script>
+</head>
+<body>
+    <h3>Dodaj stavku</h3>
+    <form enctype="multipart/form-data" method="post" action="SpremiStavku">
+        <div class="form-group inputFields">
+            <label>Naziv: </label>
+            <input asp-for="Naziv" class="form-control" />
+            <span asp-validation-for="Naziv" class="text-danger"></span>
+        </div>
+        <div class="form-group inputFields">
+            <label>Cijena: </label>
+            <input asp-for="Cijena" class="form-control" />
+            <span asp-validation-for="Cijena" class="text-danger"></span>
+        </div>
+        <div class="form-group inputFields" style="height:250px;">
+            <label>Opis: </label>
+            <textarea asp-for="Opis" class="form-control" style="height:200px;"></textarea>
+            <span asp-validation-for="Opis" class="text-danger"></span>
+        </div>
+        <div class="form-group inputFields">
+            <label>Kategorija: </label>
+            <select id="kategorija" asp-items="Model.Kategorije" class="form-control"></select>
+            <span asp-validation-for="Kategorije" class="text-danger"></span>
+        </div>
+        <div class="form-group inputFields">
+            <label>Podkategorija: </label>
+            <select asp-for="PodkategorijaID" class="form-control" id="podkategorije"></select>
+            <span asp-validation-for="PodkategorijaID" class="text-danger"></span>
+        </div>
+        <div>
+            <div class="btn btn-sm" id="customBtn">
+                <span><i class="fas fa-cloud-upload-alt mr-2" aria-hidden="true"></i>Odaberi sliku:</span>
+                <label for="slika" class="custom-file-upload"></label>
+                <input id="slika" asp-for="Slika" class="hide_file">
+                <span asp-validation-for="Slika" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <button class="btn btn-success" type="submit">Spremi</button>
+    </form>
+</body>
+</html>
+<script>
+    $('#slika').change(function () {
+        var i = $(this).prev('label').clone();
+        var file = $('#slika')[0].files[0].name;
+        $(this).prev('label').text(file);
+    });
+</script>
+<style>
+    .hide_file {
+        position: absolute;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    #customBtn {
+        padding: 5px 10px;
+        background: rgba(22, 203, 240);      
+        position: relative;
+        color: white;
+        border-radius: 2px;
+        text-align: center;
+        float: left;
+        cursor: pointer
+    }
+    .inputFields{
+        width:450px;
+    }
+</style>

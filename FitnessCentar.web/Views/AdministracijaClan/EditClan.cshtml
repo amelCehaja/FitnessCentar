@@ -1,0 +1,55 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaEditClanaVM
+@{
+    ViewData["Title"] = "EditClan";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Uredi clana</h2>
+<form action="/administracijaClan/SpremiEditClan" method="post" style="width:450px;">
+    <input asp-for="ID" type="hidden" />
+    <div class="form-group">
+        <label>Ime: </label>
+        <input asp-for="Ime" class="form-control"/>
+        <span asp-validation-for="Ime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Prezime: </label>
+        <input asp-for="Prezime" class="form-control"/>
+        <span asp-validation-for="Prezime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Spol</label>
+        <select asp-for="Spol" asp-items="Model.spol" class="form-control"></select>
+        <span asp-validation-for="Spol" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>JMBG</label>
+        <input asp-for="JMBG" class="form-control"/>
+        <span asp-validation-for="JMBG" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Datum rođenja</label>
+        <input asp-for="DatumRodenja" type="date" class="form-control" />
+        <span asp-validation-for="DatumRodenja" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Broj telefona</label>
+        <input asp-for="BrojTelefona" class="form-control" />
+        <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Broj kartice</label>
+        <input asp-for="BrojKartice" class="form-control" readonly/>
+        <a href="/administracijaClan/UpdateBrojKartice?id=@Model.ID">Promijeni broj kartice</a>
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Spremi">
+</form>
+

@@ -1,0 +1,29 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPrikazNaruzbiVM
+@{
+    ViewData["Title"] = "PrikazNarudzbi";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Prikaz Narudzbi</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Datum/vrijeme narudzbe</th>
+            <th>Broj stavki</th>
+            <th>Cijena</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Narudzbe)
+        {
+            <tr>
+                <td>@x.VrijemeNarudzbe</td>
+                <td>@x.BrojStavki</td>
+                <td>@x.Cijena KM</td>
+                <td><a href="/administracijawebshop/detaljiNarudzba?id=@x.ID" class="btn btn-info">Detalji</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

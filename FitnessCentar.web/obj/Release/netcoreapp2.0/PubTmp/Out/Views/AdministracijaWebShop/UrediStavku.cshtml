@@ -1,0 +1,45 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaUrediStavkuVM
+@{
+    ViewData["Title"] = "UrediStavku";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Uredi stavku</h2>
+<form action="/administracijawebshop/spremiuredistavku">
+    <input id="ID" asp-for="ID" readonly hidden />
+    <div class="form-group">
+        <label>Naziv:</label>
+        <input asp-for="Naziv" readonly class="form-control"/>
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Cijena:</label>
+        <input asp-for="Cijena" class="form-control" />
+        <span asp-validation-for="Cijena" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Opis:</label>
+        <textarea asp-for="Opis" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Kategorija:</label>
+        <input asp-for="Kategorija" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label>Podkategorija:</label>
+        <input asp-for="Podkategorija" class="form-control" readonly />
+    </div>
+    <button class="btn btn-success">Spremi</button>
+</form>
+
+<div id="ajaxDiv" style="width: 500px; margin-top:20px;"></div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/ajax/prikazSkladiste?id=" + $("#ID").val(),
+            success: function (result) {
+                $("#ajaxDiv").html(result)
+            }
+        })
+    })
+</script>

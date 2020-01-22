@@ -1,0 +1,37 @@
+﻿@model FitnessCentar.web.ViewModels.AdministracijaVMs.AdministracijaPrikazKategorijaPlanIProgramVM
+@{
+    ViewData["Title"] = "PrikazKategorija";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+@if (ViewBag.NovaKategorijaPlan)
+{
+    <div id="alert" class="alert alert-success" role="alert">
+        <span>Dodana kategorija: "@ViewBag.NovaKategorijaPlan"!</span>
+    </div>
+}
+else if (ViewBag.ObrisanaKategorijaPlan)
+{
+    <div id="alert" class="alert alert-danger" role="alert">
+        <span>Obrisana kategorija: "@ViewBag.ObrisanaKategorijaPlan"!</span>
+    </div>
+}
+<h2>Prikaz kategorija plana i programa</h2>
+<table class="table" style="width:700px;">
+    <thead class="thead-dark">
+        <tr>
+            <th>Naziv</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.kategorije)
+        {
+            <tr>
+                <td>@x.Naziv</td>
+                <td style="float:right;"><a class="btn btn-info" href="/administracijaPlanIProgram/UrediKategoriju?id=@x.ID"><i class="fas fa-edit"></i>Uredi</a><a class="btn btn-danger" href="/administracijaplaniprogram/obrisiKategoriju?id=@x.ID"><i class="fas fa-trash-alt"></i>Obrisi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/js/AdministracijaSkripte/RemoveAlert.js"></script>

@@ -1,0 +1,19 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxPrikazPodkategorijaVM
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Naziv</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model.Podkategorije)
+        {
+            <tr>
+                <td>@x.Naziv</td>
+                <td><a href="/ajax/ObrisiPodkategoriju?id=@x.ID" class="btn btn-danger" ajax-poziv="da" ajax-rezultat="ajaxDiv"><i class="fas fa-trash-alt"></i>Obrisi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-info" href="/ajax/DodajPodkategoriju?id=@Model.KategorijaID" ajax-poziv="da" ajax-rezultat="ajaxDiv">Dodaj podkategoriju</a>

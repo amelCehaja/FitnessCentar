@@ -1,0 +1,24 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxDodajPodkategorijuVM
+<form>
+    <input asp-for="KategorijaID" hidden />
+    <div class="form-group">
+        <label>Naziv:</label>
+        <input asp-for="Naziv" class="form-control"/>
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <button class="btn btn-success">Spremi</button>
+</form>
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            e.preventDefault()
+            $.ajax({
+                url: "/ajax/SpremiPodkategoriju",
+                data: $("form").serialize(),
+                success: function (result) {
+                    $("#ajaxDiv").html(result)
+                }
+            })
+        })
+    })
+</script>

@@ -1,0 +1,41 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaPrikazKategorijaVM
+
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikazKategorija</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Naziv</th>
+                <th>Podkategorije</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kategorija in Model.Kategorije)
+            {
+                <tr>
+                    <td>@kategorija.Naziv</td>
+                    <td>
+                        @foreach(var x in kategorija.Podkategorije)
+                        {
+                            <span>@x, </span>
+                        }
+                    </td>
+                    <td><a class="btn btn-info" href="/administracijaWebShop/KategorijaDetalji?id=@kategorija.ID">Detalji</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

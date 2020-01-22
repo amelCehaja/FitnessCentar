@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>WebcamJS Test Page</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Administracija/updatePhoto.css" rel="stylesheet" />
+</head>
+
+<body class="container">
+    <br />
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Camera</div>
+            <div class="panel-body">
+                <div id="my_camera"></div>             
+                <form>
+                    <input type="button" class="btn btn-success" value="Take Snapshot" onClick="take_snapshot()">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Captured Photo</div>
+            <div class="panel-body">
+                <div id="results"></div>
+            </div>    
+            <form>
+                <input type="button" class="btn btn-success" value="Save" onClick="save()" /> 
+              </form>
+            <br />
+            <br />
+        </div>
+    </div>
+
+    <div class="col-md-2">    </div>    
+    <script src="~/js/WebCamScript/webcam.js"></script>
+    <script src="~/js/AdministracijaSkripte/updatePhoto.js"></script>
+
+</body>
+</html> 

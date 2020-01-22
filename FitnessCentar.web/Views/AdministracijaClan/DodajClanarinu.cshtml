@@ -1,0 +1,31 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajClanarinuVM
+@{
+    ViewData["Title"] = "AddClanarina";
+    Layout = "~/Views/Shared/AdministracijaLayout.cshtml";
+}
+
+<h2>Dodaj članarinu</h2>
+<form action="/administracijaclan/spremiclanarinu" method="post">
+    <input asp-for="ClanID" hidden />
+    <div class="form-group">
+        <label>Ime i prezime:</label>
+        <input asp-for="ImePrezime" readonly class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Tip članarine:</label>
+        <select id="tipClanarine" asp-for="TipClanarineID" asp-items="Model.TipoviClanarine" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label>Datum pocetka članarine:</label>
+        <input id="datumPocetka" asp-for="DatumDodavanja" type="date" class="form-control" />
+        <span asp-validation-for="DatumDodavanja" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Datum isteka članarine</label>
+        <input id="datumIsteka" asp-for="DatumIsteka" type="date" readonly class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Spremi</button>
+</form>
+<script src="~/js/AdministracijaSkripte/AutoDatumIstekaClanarine.js"></script>
+

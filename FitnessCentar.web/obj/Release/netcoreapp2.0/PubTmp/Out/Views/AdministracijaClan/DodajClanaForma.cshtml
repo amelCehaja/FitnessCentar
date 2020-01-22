@@ -1,0 +1,93 @@
+﻿@using FitnessCentar.web.ViewModels.AdministracijaVMs
+@model AdministracijaDodajClanaVM
+@{
+    Layout = "AdministracijaLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj clana</title>
+    <script src="~/js/WebCamScript/webcam.js"></script>
+    <script src="~/js/AdministracijaSkripte/AutoDatumIstekaClanarine.js"></script>
+    <link rel="stylesheet" href="~/css/Administracija/forms.css" type="text/css"/>
+</head>
+<body>  
+    <form id="forma" action="/AdministracijaClan/SpremiClan" enctype="multipart/form-data" method="post" class="forma">
+        <h2>Dodaj člana</h2>
+        <div class="row red">
+            <div class="col-6">
+                <label>Ime: </label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+
+            <div class="col-6">
+                <label>Prezime: </label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row red">
+            <div class="col-6">
+                <label>Spol</label>
+                <select asp-for="Spol" asp-items="Model.spol" class="form-control"></select>
+                <span asp-validation-for="Spol" class="text-danger"></span>
+            </div>
+
+            <div class="col-6">
+                <label>Datum rođenja</label>
+                <input asp-for="DatumRodenja" type="date" class="form-control" />
+                <span asp-validation-for="DatumRodenja" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row red">
+            <div class="col-6">
+                <label>Broj telefona</label>
+                <input asp-for="BrojTelefona" class="form-control" />
+                <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+            </div>
+            <div class="col-6">
+                <label>JMBG</label>
+                <input asp-for="JMBG" class="form-control" />
+                <span asp-validation-for="JMBG" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row red">
+            <div class="col-6">
+                <label>Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-6">
+                <label>Broj kartice</label>
+                <input asp-for="BrojKartice" class="form-control" />
+                <span asp-validation-for="BrojKartice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row red">
+            <div class="col-4">
+                <label>Tip članarine</label>
+                <select id="tipClanarine" asp-for="TipClanarineID" asp-items="Model.clanarine" class="form-control"></select>
+                <span asp-validation-for="TipClanarineID" class="text-danger"></span>
+            </div>
+
+            <div class="col-4">
+                <label>Početak članarine</label>
+                <input type="date" id="datumPocetka" asp-for="DatumDodavanja" class="form-control" />
+                <span asp-validation-for="DatumDodavanja" class="text-danger"></span>
+            </div>
+
+            <div class="col-4">
+                <label>Kraj članarine</label>
+                <input type="date" id="datumIsteka" asp-for="DatumIsteka" class="form-control" readonly />
+                <span asp-validation-for="DatumIsteka" class="text-danger"></span>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success" value="Spremi" style="margin-top: 15px;">
+    </form>
+    
+</body>
+</html>

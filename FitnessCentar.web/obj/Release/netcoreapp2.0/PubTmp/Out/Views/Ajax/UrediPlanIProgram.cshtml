@@ -1,0 +1,19 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxUrediPiPVM
+
+<form style="width:450px;" action="/administracijaPlanIProgram/SpremiEditPlanIProgram">
+    <input asp-for="ID" readonly hidden id="planId" />
+    <div class="form-group">
+        <label for="naziv">Naziv:</label>
+        <input id="naziv" asp-for="Naziv" class="form-control" readonly/>
+    </div>
+    <div class="form-group">
+        <label for="kategorija">Kategorija:</label>
+        <input id="kategorija" asp-for="Kategorija" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label for="opis">Opis:</label>
+        <textarea id="opis" asp-for="Opis" class="form-control" style="height:200px;"></textarea>
+        <span asp-validation-for="Opis" class="text-danger"></span>
+    </div>
+    <button class="btn btn-success">Spremi</button>
+</form>

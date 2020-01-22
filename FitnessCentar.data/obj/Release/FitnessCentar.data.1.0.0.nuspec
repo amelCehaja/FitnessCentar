@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FitnessCentar.data</id>
+    <version>1.0.0</version>
+    <authors>FitnessCentar.data</authors>
+    <owners>FitnessCentar.data</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="Microsoft.AspNetCore.Session" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="2.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.data\bin\Release\netcoreapp2.0\FitnessCentar.data.runtimeconfig.json" target="lib\netcoreapp2.0\FitnessCentar.data.runtimeconfig.json" />
+    <file src="D:\Seminarski radovi\RS1\SeminarskiRS1\WebApp\FitnessCentar\FitnessCentar.data\bin\Release\netcoreapp2.0\FitnessCentar.data.dll" target="lib\netcoreapp2.0\FitnessCentar.data.dll" />
+  </files>
+</package>

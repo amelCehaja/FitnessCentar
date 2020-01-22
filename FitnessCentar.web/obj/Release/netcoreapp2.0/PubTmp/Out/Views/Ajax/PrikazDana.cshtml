@@ -1,0 +1,54 @@
+﻿@model FitnessCentar.web.ViewModels.AjaxVMs.AjaxPrikazDanaVM
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Rbr</th>
+            <th>Naziv</th>
+            <th>Broj setova</th>
+            <th>Broj ponavljanja</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Vjezbe)
+        {
+            <tr>
+                <th>@x.RedniBrojVjezbe</th>
+                <td>@x.Naziv</td>
+                <td>@x.BrojSetova</td>
+                <td>@x.BrojPonavljanja</td>
+                <td><a class="edit btn btn-info" href="/ajax/urediDanVjezba?id=@x.ID"><i class="fas fa-edit"></i>Uredi</a><a class="delete btn btn-danger" href="/ajax/obrisiDanVjezba?id=@x.ID"><i class="fas fa-trash-alt"></i>Obrisi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<a class="btn btn-dark" ajax-poziv="da" ajax-rezultat="ajaxDiv" href="/ajax/dodajdanvjezba?danID=@Model.DanID">Dodaj vjezbu</a>
+<script>
+    $(document).ready(function () {
+        $(".delete").click(function (e) {
+            e.preventDefault()
+            $.ajax({
+                url: $(this).attr("href"),
+                success: function (result) {
+                    $("#ajaxDiv").html(result)
+                }
+            })
+        })
+        $(".edit").click(function (e){
+            e.preventDefault()
+            $.ajax({
+                url: $(this).attr("href"),
+                success: function (result) {
+                    $("#ajaxDiv").html(result)
+                }
+            })
+        })
+    })
+</script>
+<style>
+    td, th {
+        text-align: center;
+    }
+</style>

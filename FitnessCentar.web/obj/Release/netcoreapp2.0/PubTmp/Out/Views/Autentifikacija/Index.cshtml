@@ -1,0 +1,50 @@
+﻿@model FitnessCentar.web.ViewModels.Autentifikacija.LoginVM
+@{
+    ViewData["Title"] = "Login";
+    string error_poruka = (string)TempData["error_poruka"];
+    Layout = "LayoutAnonim";
+}
+@if (ViewBag.Message != null)
+{
+    <div class="col-md-4 col-md-offset-4">
+        <span class="text-success">Password updated succesfully!</span>
+    </div>
+}
+
+<div class="col-md-4 col-md-offset-4">
+    <h2>Fitness centar</h2>
+
+    <form asp-action="Login">
+
+        <div class="form-group">
+            <label>Username: </label>
+            <div>
+                <input asp-for="KorisnickoIme" class="form-control" />
+                <span asp-validation-for="KorisnickoIme" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Password: </label>
+            <div>
+                <input asp-for="Lozinka" class="form-control" />
+                <span asp-validation-for="Lozinka" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <input type="submit" class="form-control btn btn-primary" value="Login" />
+        @*<input asp-for="ZapamtiPassword" />   Zapamti password*@
+    </form>
+    <br />
+    <a class="form-control btn btn-danger" asp-action="RegisterForm">Register</a>
+    <a class="form-control" href="/autentifikacija/ForgotPasswordView">Forgot password?</a>
+
+    @if (error_poruka != null)
+    {
+        <br />
+        <div class="alert alert-danger">
+            @error_poruka
+        </div>
+    }
+</div>

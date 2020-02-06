@@ -175,9 +175,9 @@ namespace FitnessCentar.web.Controllers
 
             //for azure
             //var link = Request.Host.Host + verifyUrl;
-            var fromEmail = new MailAddress("fitnesscentarrs1@gmail.com", "Seminarski RS1");
+            var fromEmail = new MailAddress("enterYourMailHere", "Seminarski RS1");
             var toEmail = new MailAddress(emailID);
-            var fromEmailPassword = "semin@rskirs1";
+            var fromEmailPassword = "EnterYourPasswordHere";
 
             string subject = "";
             string body = "";
